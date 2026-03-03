@@ -43,6 +43,11 @@
     --shadow-card-hover: 0 4px 12px hsl(217 91% 50% / 0.1), 0 16px 40px hsl(217 91% 50% / 0.08);
     --shadow-button: 0 2px 8px hsl(217 91% 50% / 0.3);
 
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -70,6 +75,10 @@
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 210 40% 98%;
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
     --border: 217 32% 17%;
     --input: 217 32% 17%;
     --ring: 217 91% 60%;
