@@ -220,7 +220,7 @@ const Dashboard = () => {
                       </TableHeader>
                       <TableBody>
                         {contracts.map((c: any) => (
-                          <TableRow key={c.id} className="cursor-pointer">
+                          <TableRow key={c.id} className="cursor-pointer hover:bg-muted/50" onClick={() => navigate(`/dashboard/contracts/${c.code}`)}>
                             <TableCell className="font-medium text-foreground">{c.name}</TableCell>
                             <TableCell className="hidden md:table-cell text-muted-foreground">
                               {c.freelancer || c.client}
