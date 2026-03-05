@@ -89,6 +89,7 @@ const fadeUp = {
 };
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   const [role, setRole] = useState<UserRole>(() => {
     return (localStorage.getItem("dashboard_role") as UserRole) || "contractor";
   });
