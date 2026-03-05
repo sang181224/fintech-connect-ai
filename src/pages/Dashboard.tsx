@@ -52,10 +52,10 @@ const freelancerActions = [
 ];
 
 const freelancerContracts = [
-  { id: 1, name: "Thiết kế UI/UX App", client: "Công ty ABC", total: "₫62.5M", earned: "₫37.5M", progress: 60, current: "MS #4 — Prototype", status: "active" },
-  { id: 2, name: "Phát triển Backend API", client: "Startup XYZ", total: "₫100M", earned: "₫25M", progress: 25, current: "MS #2 — Auth Module", status: "active" },
-  { id: 3, name: "Viết nội dung SEO", client: "Shop Online", total: "₫20M", earned: "₫18M", progress: 90, current: "MS #5 — Chỉnh sửa", status: "review" },
-  { id: 4, name: "Thiết kế logo", client: "Brand Corp", total: "₫15M", earned: "₫15M", progress: 100, current: "Hoàn thành", status: "completed" },
+  { id: 1, code: "1090", name: "Thiết kế UI/UX App", client: "Công ty ABC", total: "₫62.5M", earned: "₫37.5M", progress: 60, current: "MS #4 — Prototype", status: "active" },
+  { id: 2, code: "1092", name: "Phát triển Backend API", client: "Startup XYZ", total: "₫100M", earned: "₫25M", progress: 25, current: "MS #2 — Auth Module", status: "active" },
+  { id: 3, code: "1088", name: "Viết nội dung SEO", client: "Shop Online", total: "₫20M", earned: "₫18M", progress: 90, current: "MS #5 — Chỉnh sửa", status: "review" },
+  { id: 4, code: "1095", name: "Thiết kế logo", client: "Brand Corp", total: "₫15M", earned: "₫15M", progress: 100, current: "Hoàn thành", status: "completed" },
 ];
 
 // ─── Timeline Events ───────────────────────────────────────────
