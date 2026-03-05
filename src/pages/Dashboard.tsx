@@ -31,10 +31,10 @@ const contractorActions = [
 ];
 
 const contractorContracts = [
-  { id: 1, name: "Thiết kế UI/UX App", freelancer: "Trần Minh", total: "₫62.5M", released: "₫37.5M", progress: 60, milestones: "3/5", status: "active" },
-  { id: 2, name: "Phát triển Backend API", freelancer: "Lê Hoàng", total: "₫100M", released: "₫25M", progress: 25, milestones: "1/4", status: "active" },
-  { id: 3, name: "Viết nội dung SEO", freelancer: "Nguyễn Lan", total: "₫20M", released: "₫18M", progress: 90, milestones: "4/5", status: "review" },
-  { id: 4, name: "Thiết kế logo thương hiệu", freelancer: "Võ Anh", total: "₫15M", released: "₫15M", progress: 100, milestones: "3/3", status: "completed" },
+  { id: 1, code: "1090", name: "Thiết kế UI/UX App", freelancer: "Trần Minh", total: "₫62.5M", released: "₫37.5M", progress: 60, milestones: "3/5", status: "active" },
+  { id: 2, code: "1092", name: "Phát triển Backend API", freelancer: "Lê Hoàng", total: "₫100M", released: "₫25M", progress: 25, milestones: "1/4", status: "active" },
+  { id: 3, code: "1088", name: "Viết nội dung SEO", freelancer: "Nguyễn Lan", total: "₫20M", released: "₫18M", progress: 90, milestones: "4/5", status: "review" },
+  { id: 4, code: "1095", name: "Thiết kế logo thương hiệu", freelancer: "Võ Anh", total: "₫15M", released: "₫15M", progress: 100, milestones: "3/3", status: "completed" },
 ];
 
 // ─── Mock Data: Freelancer ─────────────────────────────────────
