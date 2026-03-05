@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { DashboardLayout } from "@/components/dashboard/DashboardLayout";
 import { RoleSwitcher, UserRole } from "@/components/dashboard/RoleSwitcher";
 import {
@@ -30,10 +31,10 @@ const contractorActions = [
 ];
 
 const contractorContracts = [
-  { id: 1, name: "Thiết kế UI/UX App", freelancer: "Trần Minh", total: "₫62.5M", released: "₫37.5M", progress: 60, milestones: "3/5", status: "active" },
-  { id: 2, name: "Phát triển Backend API", freelancer: "Lê Hoàng", total: "₫100M", released: "₫25M", progress: 25, milestones: "1/4", status: "active" },
-  { id: 3, name: "Viết nội dung SEO", freelancer: "Nguyễn Lan", total: "₫20M", released: "₫18M", progress: 90, milestones: "4/5", status: "review" },
-  { id: 4, name: "Thiết kế logo thương hiệu", freelancer: "Võ Anh", total: "₫15M", released: "₫15M", progress: 100, milestones: "3/3", status: "completed" },
+  { id: 1, code: "1090", name: "Thiết kế UI/UX App", freelancer: "Trần Minh", total: "₫62.5M", released: "₫37.5M", progress: 60, milestones: "3/5", status: "active" },
+  { id: 2, code: "1092", name: "Phát triển Backend API", freelancer: "Lê Hoàng", total: "₫100M", released: "₫25M", progress: 25, milestones: "1/4", status: "active" },
+  { id: 3, code: "1088", name: "Viết nội dung SEO", freelancer: "Nguyễn Lan", total: "₫20M", released: "₫18M", progress: 90, milestones: "4/5", status: "review" },
+  { id: 4, code: "1095", name: "Thiết kế logo thương hiệu", freelancer: "Võ Anh", total: "₫15M", released: "₫15M", progress: 100, milestones: "3/3", status: "completed" },
 ];
 
 // ─── Mock Data: Freelancer ─────────────────────────────────────
@@ -51,10 +52,10 @@ const freelancerActions = [
 ];
 
 const freelancerContracts = [
-  { id: 1, name: "Thiết kế UI/UX App", client: "Công ty ABC", total: "₫62.5M", earned: "₫37.5M", progress: 60, current: "MS #4 — Prototype", status: "active" },
-  { id: 2, name: "Phát triển Backend API", client: "Startup XYZ", total: "₫100M", earned: "₫25M", progress: 25, current: "MS #2 — Auth Module", status: "active" },
-  { id: 3, name: "Viết nội dung SEO", client: "Shop Online", total: "₫20M", earned: "₫18M", progress: 90, current: "MS #5 — Chỉnh sửa", status: "review" },
-  { id: 4, name: "Thiết kế logo", client: "Brand Corp", total: "₫15M", earned: "₫15M", progress: 100, current: "Hoàn thành", status: "completed" },
+  { id: 1, code: "1090", name: "Thiết kế UI/UX App", client: "Công ty ABC", total: "₫62.5M", earned: "₫37.5M", progress: 60, current: "MS #4 — Prototype", status: "active" },
+  { id: 2, code: "1092", name: "Phát triển Backend API", client: "Startup XYZ", total: "₫100M", earned: "₫25M", progress: 25, current: "MS #2 — Auth Module", status: "active" },
+  { id: 3, code: "1088", name: "Viết nội dung SEO", client: "Shop Online", total: "₫20M", earned: "₫18M", progress: 90, current: "MS #5 — Chỉnh sửa", status: "review" },
+  { id: 4, code: "1095", name: "Thiết kế logo", client: "Brand Corp", total: "₫15M", earned: "₫15M", progress: 100, current: "Hoàn thành", status: "completed" },
 ];
 
 // ─── Timeline Events ───────────────────────────────────────────
@@ -88,6 +89,7 @@ const fadeUp = {
 };
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   const [role, setRole] = useState<UserRole>(() => {
     return (localStorage.getItem("dashboard_role") as UserRole) || "contractor";
   });
@@ -218,7 +220,7 @@ const Dashboard = () => {
                       </TableHeader>
                       <TableBody>
                         {contracts.map((c: any) => (
-                          <TableRow key={c.id} className="cursor-pointer">
+                          <TableRow key={c.id} className="cursor-pointer hover:bg-muted/50" onClick={() => navigate(`/dashboard/contracts/${c.code}`)}>
                             <TableCell className="font-medium text-foreground">{c.name}</TableCell>
                             <TableCell className="hidden md:table-cell text-muted-foreground">
                               {c.freelancer || c.client}
