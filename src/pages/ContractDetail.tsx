@@ -161,6 +161,21 @@ const ContractDetail = () => {
 
   const contract = contractId ? mockContracts[contractId] : undefined;
 
+  const progressPct = contract ? Math.round((contract.releasedValue / contract.totalValue) * 100) : 0;
+  const escrowHeld = contract ? contract.totalValue - contract.releasedValue : 0;
+  const completedMs = contract ? contract.milestones.filter((m) => m.status === "released").length : 0;
+  const totalMs = contract ? contract.milestones.length : 0;
+  const statusConf = contract ? contractStatusConfig[contract.status] : contractStatusConfig.active;
+  const timeline = contract ? generateTimeline(contract) : [];
+  const visibleTimeline = showAllTimeline ? timeline : timeline.slice(0, 5);
+
+  const milestoneSummary = useMemo(() => {
+    if (!contract) return {};
+    const counts: Partial<Record<MilestoneStatus, number>> = {};
+    contract.milestones.forEach((m) => { counts[m.status] = (counts[m.status] || 0) + 1; });
+    return counts;
+  }, [contract]);
+
   if (!contract) {
     return (
       <DashboardLayout>
@@ -176,20 +191,6 @@ const ContractDetail = () => {
       </DashboardLayout>
     );
   }
-
-  const progressPct = Math.round((contract.releasedValue / contract.totalValue) * 100);
-  const escrowHeld = contract.totalValue - contract.releasedValue;
-  const completedMs = contract.milestones.filter((m) => m.status === "released").length;
-  const totalMs = contract.milestones.length;
-  const statusConf = contractStatusConfig[contract.status];
-  const timeline = generateTimeline(contract);
-  const visibleTimeline = showAllTimeline ? timeline : timeline.slice(0, 5);
-
-  const milestoneSummary = useMemo(() => {
-    const counts: Partial<Record<MilestoneStatus, number>> = {};
-    contract.milestones.forEach((m) => { counts[m.status] = (counts[m.status] || 0) + 1; });
-    return counts;
-  }, [contract.milestones]);
 
   return (
     <DashboardLayout>
