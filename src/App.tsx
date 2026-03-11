@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import Milestones from "./pages/Milestones";
 import ContractDetail from "./pages/ContractDetail";
+import Contracts from "./pages/Contracts";
 import EscrowWallet from "./pages/EscrowWallet";
 import NotFound from "./pages/NotFound";
 
