@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import Milestones from "./pages/Milestones";
 import ContractDetail from "./pages/ContractDetail";
+import Contracts from "./pages/Contracts";
 import EscrowWallet from "./pages/EscrowWallet";
 import NotFound from "./pages/NotFound";
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/milestones" element={<Milestones />} />
+          <Route path="/dashboard/contracts" element={<Contracts />} />
           <Route path="/dashboard/contracts/:contractId" element={<ContractDetail />} />
           <Route path="/dashboard/escrow" element={<EscrowWallet />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
