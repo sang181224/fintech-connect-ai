@@ -10,6 +10,7 @@ import ContractDetail from "./pages/ContractDetail";
 import Contracts from "./pages/Contracts";
 import EscrowWallet from "./pages/EscrowWallet";
 import Messages from "./pages/Messages";
+import Disputes from "./pages/Disputes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
