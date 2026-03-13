@@ -11,6 +11,7 @@ import Contracts from "./pages/Contracts";
 import EscrowWallet from "./pages/EscrowWallet";
 import Messages from "./pages/Messages";
 import Disputes from "./pages/Disputes";
+import Notifications from "./pages/Notifications";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/dashboard/escrow" element={<EscrowWallet />} />
           <Route path="/dashboard/messages" element={<Messages />} />
           <Route path="/dashboard/disputes" element={<Disputes />} />
+          <Route path="/dashboard/notifications" element={<Notifications />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
