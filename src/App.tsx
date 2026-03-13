@@ -31,6 +31,7 @@ const App = () => (
           <Route path="/dashboard/escrow" element={<EscrowWallet />} />
           <Route path="/dashboard/messages" element={<Messages />} />
           <Route path="/dashboard/disputes" element={<Disputes />} />
+          <Route path="/dashboard/notifications" element={<Notifications />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
