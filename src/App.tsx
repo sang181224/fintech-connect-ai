@@ -12,6 +12,7 @@ import EscrowWallet from "./pages/EscrowWallet";
 import Messages from "./pages/Messages";
 import Disputes from "./pages/Disputes";
 import Notifications from "./pages/Notifications";
+import AIConsultant from "./pages/AIConsultant";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
