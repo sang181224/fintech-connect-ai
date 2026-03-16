@@ -7,6 +7,7 @@ import {
   AlertTriangle,
   Bell,
   Bot,
+  Briefcase,
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -24,13 +25,14 @@ import {
 
 const menuItems = [
   { title: "Tổng quan", url: "/dashboard", icon: LayoutDashboard },
+  { title: "Dự án", url: "/dashboard/projects", icon: Briefcase },
   { title: "Hợp đồng", url: "/dashboard/contracts", icon: FileText },
   { title: "Milestone", url: "/dashboard/milestones", icon: Milestone },
   { title: "Ví Escrow", url: "/dashboard/escrow", icon: Wallet },
   { title: "Tin nhắn", url: "/dashboard/messages", icon: MessageSquare },
   { title: "Tranh chấp", url: "/dashboard/disputes", icon: AlertTriangle },
   { title: "Thông báo", url: "/dashboard/notifications", icon: Bell },
-  { title: "AI tư vấn", url: "/dashboard/ai", icon: Bot },
+  { title: "AI tư vấn", url: "/dashboard/ai-consultant", icon: Bot },
 ];
 
 export function DashboardSidebar() {
