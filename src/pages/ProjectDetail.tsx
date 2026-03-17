@@ -24,7 +24,8 @@ import {
 import { motion } from "framer-motion";
 import { mockProjects, formatCurrency } from "@/data/projects";
 import { useState } from "react";
-import { ApplyDialog } from "@/components/project/Applydialog";
+import { ApplyDialog } from "@/components/project/ApplyDialog";
+// import { ApplyDialog } from "@/components/project/Applydialog"
 export default function ProjectDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
