@@ -17,10 +17,11 @@ import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 import ProjectDetail from "./pages/ProjectDetail";
 import Profile from "./pages/Profile";
-import { Settings } from "lucide-react";
+// import { Settings } from "lucide-react";
 import { AuthProvider } from "./contexts/AuthContext";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
 
