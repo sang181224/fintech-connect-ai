@@ -15,6 +15,7 @@ import Notifications from "./pages/Notifications";
 import AIConsultant from "./pages/AIConsultant";
 import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
+import ProjectDetail from "./pages/ProjectDetail";
 
 const queryClient = new QueryClient();
 
@@ -26,10 +27,14 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/dashboard/projects/:id" element={<ProjectDetail />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/milestones" element={<Milestones />} />
           <Route path="/dashboard/contracts" element={<Contracts />} />
-          <Route path="/dashboard/contracts/:contractId" element={<ContractDetail />} />
+          <Route
+            path="/dashboard/contracts/:contractId"
+            element={<ContractDetail />}
+          />
           <Route path="/dashboard/escrow" element={<EscrowWallet />} />
           <Route path="/dashboard/messages" element={<Messages />} />
           <Route path="/dashboard/disputes" element={<Disputes />} />

@@ -11,27 +11,24 @@ interface DashboardLayoutProps {
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full">
+      <div className="flex min-h-screen w-full">
         <DashboardSidebar />
-        <div className="flex-1 flex flex-col min-w-0">
+        <div className="flex flex-1 flex-col">
           {/* Top bar */}
-          <header className="h-14 flex items-center justify-between border-b border-border bg-card/80 backdrop-blur-sm px-4 sticky top-0 z-10">
-            <SidebarTrigger className="ml-0" />
+          <header className="flex h-14 items-center justify-between border-b px-4">
+            <SidebarTrigger />
             <div className="flex items-center gap-3">
-              <Button variant="ghost" size="icon" className="relative">
+              <Button variant="ghost" size="icon">
                 <Bell className="h-4 w-4" />
-                <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-destructive" />
               </Button>
               <Avatar className="h-8 w-8">
-                <AvatarFallback className="bg-primary text-primary-foreground text-xs font-semibold">
-                  NT
+                <AvatarFallback className="bg-primary text-primary-foreground text-xs">
+                  U
                 </AvatarFallback>
               </Avatar>
             </div>
           </header>
-          <main className="flex-1 p-4 lg:p-6 overflow-auto bg-background">
-            {children}
-          </main>
+          <main className="flex-1 overflow-auto p-6">{children}</main>
         </div>
       </div>
     </SidebarProvider>
